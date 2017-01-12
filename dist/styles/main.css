@@ -1,0 +1,296 @@
+@charset "UTF-8";
+@import url(normalize.css);
+*,
+*:before,
+*:after {
+  box-sizing: border-box; }
+
+/* use this class for block that has child floated elements */
+.ba-clearfix:before,
+.ba-clearfix:after {
+  content: '';
+  display: table; }
+
+.ba-clearfix:after {
+  clear: both; }
+
+/* hack for IE 6/7 */
+.ba-clearfix {
+  *zoom: 1; }
+
+/* classes for text */
+.ba-text-center {
+  text-align: center; }
+
+.ba-text-left {
+  text-align: left; }
+
+.ba-text-right {
+  text-align: right; }
+
+.ba-text-justify {
+  text-align: justify; }
+
+/* layout classes */
+.ba-container {
+  max-width: 1230px;
+  margin: 0 auto; }
+
+.ba-float-left {
+  float: left; }
+
+.ba-float-right {
+  float: right; }
+
+/* ba grid defination */
+/* use this class for block that has child floated elements */
+.ba-grid:before,
+.ba-grid:after {
+  content: '';
+  display: table; }
+
+.ba-grid:after {
+  clear: both; }
+
+/* hack for IE 6/7 */
+.ba-grid {
+  *zoom: 1; }
+
+.ba-grid {
+  margin: 0 -15px; }
+
+.ba-grid + .ba-grid {
+  margin-top: 30px; }
+
+.ba-grid > [class*="ba-column-"] {
+  padding: 0 15px; }
+
+[class*="ba-column-"] {
+  float: left; }
+
+.ba-column-12 {
+  width: 100%; }
+
+.ba-column-11 {
+  width: 91.667%; }
+
+.ba-column-10 {
+  width: 83.334%; }
+
+.ba-column-9 {
+  width: 75%; }
+
+.ba-column-8 {
+  width: 66.667%; }
+
+.ba-column-7 {
+  width: 58.33333333%; }
+
+.ba-column-6 {
+  width: 50%; }
+
+.ba-column-5 {
+  width: 41.6666667%; }
+
+.ba-column-4 {
+  width: 33.334%; }
+
+.ba-column-3 {
+  width: 25%; }
+
+.ba-column-2 {
+  width: 16.667%; }
+
+.ba-column-1 {
+  width: 8.334%; }
+
+@font-face {
+  font-family: 'flat';
+  src: url("../fonts/JF-Flat-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/JF-Flat-regular.woff") format("woff"), url("../fonts/JF-Flat-regular.ttf") format("truetype"), url("../fonts/JF-Flat-regular.svg#Montserrat-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat; }
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none; }
+  .slick-prev:hover, .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    outline: none;
+    background: transparent;
+    color: transparent; }
+    .slick-prev:hover:before, .slick-prev:focus:before,
+    .slick-next:hover:before,
+    .slick-next:focus:before {
+      opacity: 1; }
+  .slick-prev.slick-disabled:before,
+  .slick-next.slick-disabled:before {
+    opacity: 0.25; }
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "slick";
+    font-size: 20px;
+    line-height: 1;
+    color: white;
+    opacity: 0.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+.slick-prev {
+  left: -25px; }
+  [dir="rtl"] .slick-prev {
+    left: auto;
+    right: -25px; }
+  .slick-prev:before {
+    content: "←"; }
+    [dir="rtl"] .slick-prev:before {
+      content: "→"; }
+
+.slick-next {
+  right: -25px; }
+  [dir="rtl"] .slick-next {
+    left: -25px;
+    right: auto; }
+  .slick-next:before {
+    content: "→"; }
+    [dir="rtl"] .slick-next:before {
+      content: "←"; }
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px; }
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer; }
+    .slick-dots li button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: 20px;
+      width: 20px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer; }
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+          opacity: 1; }
+      .slick-dots li button:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "•";
+        width: 20px;
+        height: 20px;
+        font-family: "slick";
+        font-size: 6px;
+        line-height: 20px;
+        text-align: center;
+        color: black;
+        opacity: 0.25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    .slick-dots li.slick-active button:before {
+      color: black;
+      opacity: 0.75; }
+
+@font-face {
+  font-family: 'flat';
+  src: url("../fonts/JF-Flat-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/JF-Flat-regular.woff") format("woff"), url("../fonts/JF-Flat-regular.ttf") format("truetype"), url("../fonts/JF-Flat-regular.svg#Montserrat-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: 'lato', sans-serif; }
+
+h5 {
+  text-align: center;
+  font-size: 18px;
+  margin: 70px 0 0;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  text-transform: uppercase; }
+
+.ba-container__title {
+  margin: 30px 0 100px 130px;
+  display: inline-block; }
+  .ba-container__title h1 {
+    text-align: center;
+    font-size: 86px;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 300; }
+
+.ba-slider__slide {
+  position: relative;
+  width: 440px;
+  height: 400px; }
+  .ba-slider__slide .ba-slider__title {
+    position: absolute;
+    top: 285px;
+    left: 30px;
+    color: #fff;
+    width: 310px; }
+    .ba-slider__slide .ba-slider__title h2 {
+      font-size: 28px;
+      letter-spacing: 0.2em;
+      margin: 0;
+      text-transform: uppercase; }
+      .ba-slider__slide .ba-slider__title h2 p {
+        font-size: 12px;
+        line-height: 2;
+        letter-spacing: 0.2em;
+        margin: 0; }
+
+.ba-slide {
+  width: 30%;
+  margin: 0;
+  display: inline-block; }
+
+.ba-slider {
+  margin-bottom: 130px; }
